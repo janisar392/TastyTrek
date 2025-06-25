@@ -1,0 +1,20 @@
+services:
+  - type: web
+    name: tastytrek
+    runtime: docker
+    buildCommand: ./mvnw package
+    startCommand: java -jar target/*.jar
+    plan: free
+    envVars:
+      - key: MONGODB_URL
+        fromEnvVar: MONGODB_URL
+      - key: AWS_ACCESS_KEY
+        fromEnvVar: AWS_ACCESS_KEY
+      - key: AWS_SECRET_KEY
+        fromEnvVar: AWS_SECRET_KEY
+      - key: JWT_SECRET_KEY
+        fromEnvVar: JWT_SECRET_KEY
+      - key: RAZORPAY_KEY
+        fromEnvVar: RAZORPAY_KEY
+      - key: RAZORPAY_SECRET
+        fromEnvVar: RAZORPAY_SECRET
