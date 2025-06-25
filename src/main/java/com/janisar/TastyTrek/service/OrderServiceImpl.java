@@ -101,7 +101,7 @@ public class OrderServiceImpl implements OrderService{
                 .userId(newOrder.getUserId())
                 .razorpayOrderId(newOrder.getRazorpayOrderId())
                 .paymentStatus(newOrder.getPaymentStatus())
-                .orderStatus(newOrder.getPaymentStatus())
+                .orderStatus(newOrder.getOrderStatus())
                 .email(newOrder.getEmail())
                 .phoneNumber(newOrder.getPhoneNumber())
                 .orderedItems(newOrder.getOrderedItems())
