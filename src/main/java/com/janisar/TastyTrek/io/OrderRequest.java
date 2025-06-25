@@ -1,7 +1,9 @@
 package com.janisar.TastyTrek.io;
 
+import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 
 import java.util.List;
 
@@ -9,7 +11,7 @@ import java.util.List;
 @Builder
 public class OrderRequest {
 
-    private List<OrderItem> orderItems;
+    private List<OrderItem> orderedItems;
     private String userAddress;
     private double amount;
     private String email;
