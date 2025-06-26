@@ -55,7 +55,12 @@ public class SecurityConfig {
 
     private UrlBasedCorsConfigurationSource corsConfigurationSource() {
         CorsConfiguration config = new CorsConfiguration();
-        config.setAllowedOrigins(List.of("https://adminpaneltastytrek.netlify.app/","https://tastytrekjanisar.netlify.app/"));
+        config.setAllowedOrigins(List.of(
+                "https://adminpaneltastytrek.netlify.app",
+                "https://tastytrekjanisar.netlify.app",
+                "https://tastytrekadmin.netlify.app/",
+                "https://tastytrekja.netlify.app/"
+        ));
         config.setAllowedMethods(List.of("GET","POST","PUT","DELETE","OPTIONS","PATCH"));
         config.setAllowedHeaders(List.of("Authorization","Content-Type"));
         config.setAllowCredentials(true);
